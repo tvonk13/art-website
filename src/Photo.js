@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import * as data from './assets/photography';
-import { makeStyles, Typography, Divider } from "@material-ui/core";
+import { makeStyles, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
     photoContainer: {

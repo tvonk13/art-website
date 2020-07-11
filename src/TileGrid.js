@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import { Box, makeStyles } from '@material-ui/core';
 
 import {Link} from "react-router-dom";
@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
         '&:hover': {
             opacity: 0.4
         },
-        height: '350px',
+        height: 350,
         margin: '10px',
         flex: '1 1 20%',
         backgroundSize: 'cover',
@@ -29,7 +29,7 @@ export default function TileGrid({list, path}) {
     return (
         <div className={classes.div}>
             {list.map(tile =>
-                <Box key={tile.title} component={Link} to={path + tile.id} className={classes.img} style={{backgroundImage: `url(${tile.img})`}}></Box>
+                <Box key={tile.title} component={Link} to={path + tile.id} className={classes.img} style={{backgroundImage: `url(${tile.thumb})`}}/>
             )}
         </div>
     );

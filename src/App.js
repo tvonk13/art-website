@@ -3,7 +3,6 @@ import { Route } from "react-router-dom";
 import { makeStyles, Grid } from "@material-ui/core";
 
 import Nav from './Nav';
-import Home from './Home';
 import Art from './Art';
 import Artwork from './Artwork';
 import Photography from './Photography';

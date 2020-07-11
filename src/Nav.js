@@ -27,7 +27,7 @@ export default function Nav() {
 
     return (
         <Box py={2} px={4} height="fit-content" position="sticky" top={0}>
-            <img src={Logo} className={styles.logo}/>
+            <img src={Logo} className={styles.logo} alt="logo"/>
             <div className={styles.buttonLinks}>
                 <ButtonLink label="ART" to="/art" pathname={pathname}/>
                 <ButtonLink label="PHOTOGRAPHY" to="/photography" pathname={pathname}/>
