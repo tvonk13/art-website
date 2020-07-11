@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
             opacity: 0.4
         },
         height: 350,
-        margin: '10px',
+        margin: theme.spacing(1),
         flex: '1 1 20%',
         backgroundSize: 'cover',
         backgroundPosition: 'center',

@@ -19,16 +19,21 @@ const useStyles = makeStyles(theme => ({
         marginTop: theme.spacing(2),
         marginLeft: theme.spacing(1),
     },
+    typography: {
+        '&:hover': {
+            color: theme.palette.logoColors.pink,
+        },
+    }
 }));
 
 export default function Nav() {
-    const styles = useStyles();
+    const classes = useStyles();
     const { pathname } = useLocation();
 
     return (
         <Box py={2} px={4} height="fit-content" position="sticky" top={0}>
-            <img src={Logo} className={styles.logo} alt="logo"/>
-            <div className={styles.buttonLinks}>
+            <img src={Logo} className={classes.logo} alt="logo"/>
+            <div className={classes.buttonLinks}>
                 <ButtonLink label="ART" to="/art" pathname={pathname}/>
                 <ButtonLink label="PHOTOGRAPHY" to="/photography" pathname={pathname}/>
                 <ButtonLink label="ABOUT" to="/about" pathname={pathname}/>
@@ -39,6 +44,7 @@ export default function Nav() {
 
 function ButtonLink({label, to, pathname}) {
     var color = pathname.startsWith(to) || (pathname === "/" && to === "/art") ? "secondary" : "primary";
+    const classes = useStyles();
 
     return (
         <Typography
@@ -46,6 +52,7 @@ function ButtonLink({label, to, pathname}) {
             to={to}
             color={color}
             style={{textDecoration: 'none'}}
+            className={classes.typography}
         >
             {label}
         </Typography>

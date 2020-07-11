@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
     },
     img: {
         maxHeight: '100%',
-        //maxWidth: '80%',
+        maxWidth: '80%',
         marginRight: theme.spacing(6),
         marginLeft: theme.spacing(10),
         boxShadow: "5px 5px 15px 0 #f0f0f0",

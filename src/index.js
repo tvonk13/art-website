@@ -10,7 +10,7 @@ const theme = createMuiTheme({
   palette: {
     primary: { main: "#37374A" },
     secondary: { main: "#81CDC6" },
-    logoColors: { 
+    logoColors: {
       pink: "#FF91B4",
       green: "#81CDC6",
       yellow: "#FFC350",
