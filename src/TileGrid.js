@@ -1,64 +1,36 @@
 import React, {useEffect, useState} from 'react';
-import { makeStyles, GridList, GridListTile } from '@material-ui/core';
+import { Box, makeStyles } from '@material-ui/core';
 
-import Tile from "./Tile";
+import {Link} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
-    list: {
-        width: '100%',
-        height: '100%'
+    img: {
+        boxShadow: "5px 5px 10px 0 #f0f0f0",
+        '&:hover': {
+            opacity: 0.4
+        },
+        height: '350px',
+        margin: '10px',
+        flex: '1 1 20%',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
     },
-    tileGrid: {
+    div: {
         display: 'flex',
+        flexWrap: 'wrap',
+        flexDirection: 'row',
+        justifyContent: 'center'
     },
-    tileColumn: {
-        display: 'flex',
-        flexDirection: 'column'
-    },
-    tile: {
-        margin: 10
-    }
 }));
 
-export default function TileGrid({list, columns}) {
-    const classes = useStyles();
-    const [columnList, setColumnList] = useState([]);
-
-    useEffect(() => {
-        setColumnList(convertListToMap(list, columns));
-    }, []);
-
-    function convertListToMap(list, columns) {
-        let columnList = [];
-        while (columnList.length <= columns) {
-            columnList.push([]);
-        }
-        let count = 0;
-
-        list.forEach(tile => {
-            if (count === columns) {
-                count = 0;
-            }
-            columnList[count].push(tile);
-            count++;
-        })
-
-        return columnList;
-    }
-
-    return(
-        <div className={classes.tileGrid}>
-            {columnList.map((columnList, index) => (<TileColumn list={columnList} key={index} imgWidth={350} margin={10}/>))}
-        </div>
-    )
-}
-
-function TileColumn({list, imgWidth, margin}) {
+export default function TileGrid({list, path}) {
     const classes = useStyles();
 
     return (
-        <div className={classes.tileColumn}>
-            {list.map((tile, index) => (<Tile tile={tile} imgWidth={imgWidth} key={index} margin={margin}/>))}
+        <div className={classes.div}>
+            {list.map(tile =>
+                <Box key={tile.title} component={Link} to={path + tile.id} className={classes.img} style={{backgroundImage: `url(${tile.img})`}}></Box>
+            )}
         </div>
-    )
+    );
 }
