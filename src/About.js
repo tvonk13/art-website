@@ -1,15 +1,15 @@
-import React from 'react';
-import { makeStyles, Box, Typography, Link } from '@material-ui/core';
+import React, {useEffect, useState} from 'react';
+import { makeStyles, Box, Typography, Link, Fade } from '@material-ui/core';
 import Profile from './assets/profile.jpg';
 
 const useStyles = makeStyles(theme => ({
-    div: {
+    aboutContainer: {
         display: 'flex',
         justifyContent: 'center',
     },
     profile: {
-        maxWidth: '30%',
-        maxHeight: '70%',
+        //maxWidth: '30%',
+        //maxHeight: '70%',
         margin: theme.spacing(1),
         marginRight: theme.spacing(4),
     },
@@ -26,9 +26,27 @@ const useStyles = makeStyles(theme => ({
 export default function About() {
     const classes = useStyles();
 
+    const [isImgLoaded, setIsImgLoaded] = useState(false);
+    const [isContentLoaded, setIsContentLoaded] = useState(false);
+    const [imgWidth, setImgWidth] = useState(0);
+    const [imgHeight, setImgHeight] = useState(0);
+
+    useEffect(() => {
+        setIsContentLoaded(true);
+
+        var img = new Image();
+        img.onload = () => {
+            setIsImgLoaded(true);
+            setImgWidth(img.naturalWidth * .15);
+            setImgHeight(img.naturalHeight * .15);
+        }
+        img.src = Profile;
+    }, [])
+
     return(
-        <Box py={4} px={4} className={classes.div}>
-            <img src={Profile} className={classes.profile} alt="profile"/>
+        <Fade in={isContentLoaded} timeout={1000}>
+        <Box py={4} px={4} className={classes.aboutContainer} id="aboutContainer">
+            <img src={Profile} className={classes.profile} alt="profile" style={{width: imgWidth, height: imgHeight}}/>
             <Box width="30%">
                 <Typography variant="h2">Hi, I'm Taylor</Typography>
                 <Box my={2}>
@@ -53,5 +71,6 @@ export default function About() {
                 </Box>
             </Box>
         </Box>
+        </Fade>
     )
 }
