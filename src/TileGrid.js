@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { Box, makeStyles, Slide, Grid, useTheme, useMediaQuery } from '@material-ui/core';
+import { Box, makeStyles, Slide, Grid, useMediaQuery } from '@material-ui/core';
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
@@ -54,7 +54,7 @@ function Tile({tile, path, index, columns}) {
 
     useEffect(() => {
         setTimeout( () => setIsLoaded(true), (Math.floor(index / columns) * 50) + ((index % columns) * 100));
-    }, [])
+    }, [index])
 
     return (
          <Slide in={isLoaded} direction="left" key={tile.title} timeout={500}>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from "react-router-dom";
-import { makeStyles, Box, Typography, Grid } from "@material-ui/core";
+import { makeStyles, Typography, Grid } from "@material-ui/core";
 
 import Logo from './assets/artwork/logo.svg';
 

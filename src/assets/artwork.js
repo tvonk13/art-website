@@ -61,7 +61,6 @@ export const lion = {
     title: 'Lion',
     id: 'lion',
     medium: 'Digital',
-    description: "This piece was originally done with ink pen on paper and then re-drawn to it's current form using digital media"
 }
 
 export const puzzlePieces = {
