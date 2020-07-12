@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { Box, makeStyles, Slide } from '@material-ui/core';
+import { Box, makeStyles, Slide, Grid, useTheme, useMediaQuery } from '@material-ui/core';
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
@@ -10,10 +10,11 @@ const useStyles = makeStyles((theme) => ({
         },
         height: 350,
         margin: theme.spacing(1),
-        flex: '1 1 20%',
+        //flex: '1 1 20%',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         transform: 'translate3d(0,0,0)',
+        display: 'block'
     },
     div: {
         display: 'flex',
@@ -24,28 +25,40 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function TileGrid({list, path}) {
-    const classes = useStyles();
+    const isLg = useMediaQuery(theme => theme.breakpoints.up('lg'));
+    const isMd = useMediaQuery(theme => theme.breakpoints.up('md'));
+    const isSm = useMediaQuery(theme => theme.breakpoints.up('sm'));
+    let columns = 1;
+    if (isLg) {
+        columns = 4;
+    } else if (isMd) {
+        columns = 3;
+    } else if (isSm) {
+        columns = 2;
+    }
 
     return (
-        <div className={classes.div}>
+        <Grid container>
             {list.map((tile, index) =>
-                <Tile tile={tile} path={path} index={index} key={tile.title} />
+                <Grid item xs={12} sm={6} md={4} lg={3} key={tile.id}>
+                    <Tile tile={tile} path={path} index={index} columns={columns} key={tile.title} />
+                </Grid>
             )}
-        </div>
+        </Grid>
     );
 }
 
-function Tile({tile, path, index}) {
+function Tile({tile, path, index, columns}) {
     const classes = useStyles();
     const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
-        setTimeout( () => setIsLoaded(true), (Math.floor(index / 4) * 50) + ((index % 4) * 100));
+        setTimeout( () => setIsLoaded(true), (Math.floor(index / columns) * 50) + ((index % columns) * 100));
     }, [])
 
     return (
-        <Slide in={isLoaded} direction="left" key={tile.title} timeout={500}>
+         <Slide in={isLoaded} direction="left" key={tile.title} timeout={500}>
             <Box key={tile.title} component={Link} to={path + tile.id} className={classes.img} style={{backgroundImage: `url(${tile.thumb})`}}/>
-        </Slide>
+         </Slide>
     );
 }
