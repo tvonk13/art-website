@@ -51,14 +51,14 @@ export default function Artwork(props) {
 
     return (
         <Fade in={isImgLoaded} timeout={1000}>
-        <div className={classes.artworkContainer}>
-            <img src={data[id].img} alt={data[id].title} className={classes.img} />
-            <div className={classes.description}>
-                <Typography variant="h4" className={classes.title}>{data[id].title}</Typography>
-                <Typography variant="body2" className={classes.medium}><i>{data[id].medium}</i></Typography>
-                { data[id].description && <Typography variant="subtitle1">{data[id].description}</Typography> }
+            <div className={classes.artworkContainer}>
+                <img src={data[id].img} alt={data[id].title} className={classes.img} />
+                <div className={classes.description}>
+                    <Typography variant="h4" className={classes.title}>{data[id].title}</Typography>
+                    <Typography variant="body2" className={classes.medium}><i>{data[id].medium}</i></Typography>
+                    { data[id].description && <Typography variant="subtitle1">{data[id].description}</Typography> }
+                </div>
             </div>
-        </div>
         </Fade>
 
     )

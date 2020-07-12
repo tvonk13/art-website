@@ -52,7 +52,7 @@ export default function Photo(props) {
     return (
         <Fade in={isImgLoaded} timeout={1000}>
             <div className={classes.photoContainer}>
-                    <img src={data[id].img} alt={data[id].title} className={classes.img} />
+                <img src={data[id].img} alt={data[id].title} className={classes.img} />
                 <div className={classes.description}>
                     <Typography variant="h4" className={classes.title}>{data[id].title}</Typography>
                     <Typography variant="body2" className={classes.location}><i>{data[id].location}</i></Typography>

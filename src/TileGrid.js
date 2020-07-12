@@ -1,5 +1,5 @@
-import React from 'react';
-import { Box, makeStyles } from '@material-ui/core';
+import React, {useEffect, useState} from 'react';
+import { Box, makeStyles, Slide } from '@material-ui/core';
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
         flex: '1 1 20%',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
+        transform: 'translate3d(0,0,0)',
     },
     div: {
         display: 'flex',
@@ -27,9 +28,24 @@ export default function TileGrid({list, path}) {
 
     return (
         <div className={classes.div}>
-            {list.map(tile =>
-                <Box key={tile.title} component={Link} to={path + tile.id} className={classes.img} style={{backgroundImage: `url(${tile.thumb})`}}/>
+            {list.map((tile, index) =>
+                <Tile tile={tile} path={path} index={index} key={tile.title} />
             )}
         </div>
+    );
+}
+
+function Tile({tile, path, index}) {
+    const classes = useStyles();
+    const [isLoaded, setIsLoaded] = useState(false);
+
+    useEffect(() => {
+        setTimeout( () => setIsLoaded(true), (Math.floor(index / 4) * 50) + ((index % 4) * 100));
+    }, [])
+
+    return (
+        <Slide in={isLoaded} direction="left" key={tile.title} timeout={500}>
+            <Box key={tile.title} component={Link} to={path + tile.id} className={classes.img} style={{backgroundImage: `url(${tile.thumb})`}}/>
+        </Slide>
     );
 }
