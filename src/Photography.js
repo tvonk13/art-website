@@ -12,7 +12,7 @@ export default function Photography() {
     }, []);
 
     return(
-        <Fade direction="left" in={isContentLoaded} mountOnEnter unmountOnExit timeout={1000}>
+        <Fade in={isContentLoaded} timeout={1000}>
             <Box py={4} px={4}>
                 <TileGrid list={photography.all} columns={3} path="/photography/"/>
             </Box>
