@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { makeStyles, Box, Typography, Link, Slide } from '@material-ui/core';
+import { makeStyles, Box, Typography, Link, Slide, Fade } from '@material-ui/core';
 import Profile from './assets/profile.jpg';
 
 const useStyles = makeStyles(theme => ({
@@ -26,15 +26,24 @@ export default function About() {
     const classes = useStyles();
 
     const [isContentLoaded, setIsContentLoaded] = useState(false);
+    const [isImgLoaded, setIsImgLoaded] = useState(false);
 
     useEffect(() => {
         setIsContentLoaded(true);
-    }, )
+
+        var img = new Image();
+        img.onload = () => {
+            setIsImgLoaded(true);
+        }
+        img.src = Profile;
+    }, [])
 
     return(
         <Slide in={isContentLoaded} timeout={500} mountOnEnter unmountOnExit direction="left">
             <Box py={4} px={4} className={classes.aboutContainer} id="aboutContainer">
-                <img src={Profile} className={classes.profile} alt="profile"/>
+                <Fade in={isImgLoaded} timeout={500}>
+                    <img src={Profile} className={classes.profile} alt="profile"/>
+                </Fade>
                 <Box width="30%">
                     <Typography variant="h2" color="primary">Hi, I'm Taylor</Typography>
                     <Box my={2}>
