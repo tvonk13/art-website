@@ -35,7 +35,7 @@ export default function About() {
 
     return(
         <Slide in={isContentLoaded} timeout={500} mountOnEnter unmountOnExit direction="left">
-            <Grid container justify="center" style={{marginTop: '40px'}}>
+            <Grid container justify="center" style={{marginTop: '40px', marginBottom: '40px'}}>
                 <Hidden only={['xs', 'sm', 'md']}>
                     <Grid lg={1}/>
                 </Hidden>
