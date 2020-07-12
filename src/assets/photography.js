@@ -33,16 +33,16 @@ import TreesMossThumb from './photography/trees-moss-contrast-thumb.jpg';
 import TwinTowers from './photography/twin-towers-memorial.jpeg';
 import TwinTowersThumb from './photography/twin-towers-memorial-thumb.jpeg';
 
-export const biarritz = {
+const biarritz = {
     img: Biarritz,
     thumb: BiarritzThumb,
     title: 'Sunset In Biarritz',
     id: 'biarritz',
     description: "Taken while jogging along the coast of Biarritz",
-    location: "Biarritz, France",
+    subtitle: "Biarritz, France",
 }
 
-export const bubbles = {
+const bubbles = {
     img: Bubbles,
     thumb: BubblesThumb,
     title: 'Bubbles',
@@ -50,25 +50,25 @@ export const bubbles = {
     description: "",
 }
 
-export const buddhaPark = {
+const buddhaPark = {
     img: BuddhaPark,
     thumb: BuddhaParkThumb,
     title: 'Buddha In The Sky',
     id: 'buddhaPark',
     description: "",
-    location: "Buddha Park - Vientiane, Laos",
+    subtitle: "Buddha Park - Vientiane, Laos",
 }
 
-export const buddhaParkBW = {
+const buddhaParkBW = {
     img: BuddhaParkBW,
     thumb: BuddhaParkBWThumb,
     title: 'Buddha In The Sky',
     id: 'buddhaParkBW',
     description: "",
-    location: "Buddha Park - Vientiane, Laos",
+    subtitle: "Buddha Park - Vientiane, Laos",
 }
 
-export const bumblebee = {
+const bumblebee = {
     img: Bumblebee,
     thumb: BumblebeeThumb,
     title: 'Bumblebee',
@@ -76,7 +76,7 @@ export const bumblebee = {
     description: "",
 }
 
-export const butterfly = {
+const butterfly = {
     img: Butterfly,
     thumb: ButterflyThumb,
     title: 'Butterfly',
@@ -84,107 +84,107 @@ export const butterfly = {
     description: "",
 }
 
-export const goatRock = {
+const goatRock = {
     img: GoatRock,
     thumb: GoatRockThumb,
     title: 'Goat Rock',
     id: 'goatRock',
     description: "",
-    location: "Goat Rock - Jenner, CA",
+    subtitle: "Goat Rock - Jenner, CA",
 }
 
-export const goldenGateBride = {
+const goldenGateBride = {
     img: GoldenGateBridge,
     thumb: GoldenGateBridgeThumb,
     title: 'Golden Gate Bridge',
     id: 'goldenGateBride',
     description: "",
-    location: "Land's End Trail - San Francisco, CA",
+    subtitle: "Land's End Trail - San Francisco, CA",
 }
 
-export const goldenGateBrideBW = {
+const goldenGateBrideBW = {
     img: GoldenGateBridgeBW,
     thumb: GoldenGateBridgeBWThumb,
     title: 'Golden Gate Bridge',
     id: 'goldenGateBrideBW',
     description: "",
-    location: "Land's End Trail - San Francisco, CA",
+    subtitle: "Land's End Trail - San Francisco, CA",
 }
 
-export const halfDome = {
+const halfDome = {
     img: HalfDome,
     thumb: HalfDomeThumb,
     title: 'Half Dome',
     id: 'halfDome',
     description: "",
-    location: "Half Dome - Yosemite Valley, CA",
+    subtitle: "Half Dome - Yosemite Valley, CA",
 }
 
-export const halfDomeCliff = {
+const halfDomeCliff = {
     img: HalfDomeCliff,
     thumb: HalfDomeCliffThumb,
     title: 'Standing On Top of the World',
     id: 'halfDomeCliff',
     description: "",
-    location: "Half Dome - Yosemite Valley, CA",
+    subtitle: "Half Dome - Yosemite Valley, CA",
 }
 
-export const holeInTheWall = {
+const holeInTheWall = {
     img: HoleInTheWall,
     thumb: HoleInTheWallThumb,
     title: 'Hole In The Wall',
     id: 'holeInTheWall',
     description: "",
-    location: "Roxbury, MA",
+    subtitle: "Roxbury, MA",
 }
 
-export const kuangSiFalls = {
+const kuangSiFalls = {
     img: KuangSiFalls,
     thumb: KuangSiFallsThumb,
     title: 'Kuang Si Falls',
     id: 'kuangSiFalls',
     description: "",
-    location: "Kuang Si Falls - Luang Prabang, Laos",
+    subtitle: "Kuang Si Falls - Luang Prabang, Laos",
 }
 
-export const tahoeSnow = {
+const tahoeSnow = {
     img: TahoeSnow,
     thumb: TahoeSnowThumb,
     title: 'Snow Fading',
     id: 'tahoeSnow',
     description: "",
-    location: "Tahoe National Forrest - Soda Springs, CA",
+    subtitle: "Tahoe National Forrest - Soda Springs, CA",
 }
 
-export const tahoeSunset = {
+const tahoeSunset = {
     img: TahoeSunset,
     thumb: TahoeSunsetThumb,
     title: 'Tahoe Sunset',
     id: 'tahoeSunset',
     description: "",
-    location: "Rucker Lake, Tahoe National Forrest - Rucker Lake, CA",
+    subtitle: "Rucker Lake, Tahoe National Forrest - Rucker Lake, CA",
 }
 
-export const treeMoss = {
+const treeMoss = {
     img: TreesMoss,
     thumb: TreesMossThumb,
     title: 'Moss',
     id: 'treeMoss',
     description: "",
-    location: "Tahoe National Forrest - Soda Springs, CA",
+    subtitle: "Tahoe National Forrest - Soda Springs, CA",
 }
 
-export const twinTowers = {
+const twinTowers = {
     img: TwinTowers,
     thumb: TwinTowersThumb,
     title: 'Reflections',
     id: 'twinTowers',
     description: "Taken at the base of the Twin Towers Memorial",
-    location: "Twin Towers Memorial - New York, NY",
+    subtitle: "Twin Towers Memorial - New York, NY",
 }
 
 // ---------- Page lists ----------
-export const all = [
+export const photoList = [
     tahoeSnow,
     tahoeSunset,
     treeMoss,
@@ -201,3 +201,21 @@ export const all = [
     goldenGateBride,
     bubbles,
 ]
+
+export const photoMap = {
+    tahoeSnow: tahoeSnow,
+    tahoeSunset: tahoeSunset,
+    treeMoss: treeMoss,
+    kuangSiFalls: kuangSiFalls,
+    bumblebee: bumblebee,
+    biarritz: biarritz,
+    halfDome: halfDome,
+    halfDomeCliff: halfDomeCliff,
+    buddhaParkBW: buddhaParkBW,
+    twinTowers: twinTowers,
+    goatRock: goatRock,
+    butterfly: butterfly,
+    holeInTheWall: holeInTheWall,
+    goldenGateBride: goldenGateBride,
+    bubbles: bubbles,
+}

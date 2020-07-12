@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import * as data from './assets/photography';
+//import * as data from './assets/photography';
 import { makeStyles, Typography, Fade, Grid } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
-    photoContainer: {
+    container: {
         paddingTop: theme.spacing(5),
     },
     img: {
@@ -13,9 +13,10 @@ const useStyles = makeStyles(theme => ({
     }
 }))
 
-export default function Artwork(props) {
+export default function ImageViewer(props) {
     const classes = useStyles();
     const id = props.match.params.id;
+    const data = props.data;
 
     const [isImgLoaded, setIsImgLoaded] = useState(false);
 
@@ -29,10 +30,10 @@ export default function Artwork(props) {
 
     return (
         <Fade in={isImgLoaded} timeout={1000}>
-            <Grid container direction="column" className={classes.photoContainer} >
+            <Grid container direction="column" className={classes.container} >
                 <Grid item container direction="column" style={{marginBottom: "24px"}} alignItems="center">
                     <Typography variant="h4" color="primary" style={{marginBottom: "4px"}}>{data[id].title}</Typography>
-                    <Typography variant="body2" color="primary" style={{marginBottom: "4px"}}><i>{data[id].location}</i></Typography>
+                    <Typography variant="body2" color="primary" style={{marginBottom: "4px"}}><i>{data[id].subtitle}</i></Typography>
                     { data[id].description && <Typography variant="subtitle1" color="primary">{data[id].description}</Typography> }
                 </Grid>
                 <Grid item container justify="center">

@@ -31,137 +31,137 @@ import PolyphemusThumb from './artwork/polyphemus-thumb.png';
 import Roses from './artwork/roses.png';
 import RosesThumb from './artwork/roses-thumb.png';
 
-export const pattern = {
+const pattern = {
     img: Pattern,
     thumb: PatternThumb,
     title: 'Pattern In D Minor',
     id: 'pattern',
-    medium: 'Digital'
+    subtitle: 'Digital'
 }
 
-export const gecko = {
+const gecko = {
     img: Gecko,
     thumb: GeckoThumb,
     title: 'Gecko',
     id: 'gecko',
-    medium: 'Digital'
+    subtitle: 'Digital'
 }
 
-export const beetle = {
+const beetle = {
     img: Beetle,
     thumb: BeetleThumb,
     title: 'Japanese Beetle',
     id: 'beetle',
-    medium: 'Digital',
+    subtitle: 'Digital',
 }
 
-export const lion = {
+const lion = {
     img: Lion,
     thumb: LionThumb,
     title: 'Lion',
     id: 'lion',
-    medium: 'Digital',
+    subtitle: 'Digital',
 }
 
-export const puzzlePieces = {
+const puzzlePieces = {
     img: PuzzlePieces,
     thumb: PuzzlePiecesThumb,
     title: 'Puzzle Pieces',
     id: 'puzzlePieces',
-    medium: 'Posca paint markers and watercolor on 140lb cold pressed paper'
+    subtitle: 'Posca paint markers and watercolor on 140lb cold pressed paper'
 }
 
-export const deer = {
+const deer = {
     img: Deer,
     thumb: DeerThumb,
     title: 'Deer',
     id: 'deer',
-    medium: 'Ink pen on paper'
+    subtitle: 'Ink pen on paper'
 }
 
-export const amanita = {
+const amanita = {
     img: Amanita,
     thumb: AmanitaThumb,
     title: 'Amanita',
     id: 'amanita',
-    medium: 'Digital'
+    subtitle: 'Digital'
 }
 
-export const amanitaRound = {
+const amanitaRound = {
     img: AmanitaRound,
     thumb: AmanitaRoundThumb,
     title: 'Amanita',
     id: 'amanitaRound',
-    medium: 'Digital'
+    subtitle: 'Digital'
 }
 
-export const bodiesCollide = {
+const bodiesCollide = {
     img: BodiesCollide,
     thumb: BodiesCollideThumb,
     title: 'Bodies Collide',
     id: 'bodiesCollide',
-    medium: 'Ink pen on paper'
+    subtitle: 'Ink pen on paper'
 }
 
-export const colorfulLines = {
+const colorfulLines = {
     img: ColorfulLines,
     thumb: ColorfulLinesThumb,
     title: 'Colorful Lines',
     id: 'colorfulLines',
-    medium: 'Posca paint pen'
+    subtitle: 'Posca paint pen'
 }
 
-export const drips = {
+const drips = {
     img: Drips,
     thumb: DripsThumb,
     title: 'Abstract Drips',
     id: 'drips',
-    medium: 'Ink pen on paper'
+    subtitle: 'Ink pen on paper'
 }
 
-export const geometrics = {
+const geometrics = {
     img: Geometrics,
     thumb: GeometricsThumb,
     title: 'Geometrics',
     id: 'geometrics',
-    medium: 'Posca paint pen'
+    subtitle: 'Posca paint pen'
 }
 
-export const iris = {
+const iris = {
     img: Iris,
     thumb: IrisThumb,
     title: 'Iris',
     id: 'iris',
-    medium: 'Unmounted lino block and water-based ink'
+    subtitle: 'Unmounted lino block and water-based ink'
 }
 
-export const elephant = {
+const elephant = {
     img: Elephant,
     thumb: ElephantThumb,
     title: 'Elephant',
     id: 'elephant',
-    medium: 'Ink pen on paper'
+    subtitle: 'Ink pen on paper'
 }
 
-export const polyphemus = {
+const polyphemus = {
     img: Polyphemus,
     thumb: PolyphemusThumb,
     title: 'Polyphemus',
     id: 'polyphemus',
-    medium: 'Digital'
+    subtitle: 'Digital'
 }
 
-export const roses = {
+const roses = {
     img: Roses,
     thumb: RosesThumb,
     title: 'Stop And Smell The Roses',
     id: 'roses',
-    medium: 'Digital'
+    subtitle: 'Digital'
 }
 
-// ---------- Page lists ----------
+// ---------- Page lists and maps ----------
 
-export const all = [
+export const artList = [
     pattern,
     gecko,
     beetle,
@@ -178,3 +178,21 @@ export const all = [
     elephant,
     colorfulLines,
 ]
+
+export const artMap = {
+    pattern: pattern,
+    gecko: gecko,
+    beetle: beetle,
+    lion: lion,
+    puzzlePieces: puzzlePieces,
+    amanita: amanita,
+    deer: deer,
+    bodiesCollide: bodiesCollide,
+    roses: roses,
+    drips: drips,
+    geometrics: geometrics,
+    iris: iris,
+    polyphemus: polyphemus,
+    elephant: elephant,
+    colorfulLines: colorfulLines,
+}
