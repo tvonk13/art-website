@@ -54,9 +54,9 @@ export default function Photo(props) {
             <div className={classes.photoContainer}>
                 <img src={data[id].img} alt={data[id].title} className={classes.img} />
                 <div className={classes.description}>
-                    <Typography variant="h4" className={classes.title}>{data[id].title}</Typography>
-                    <Typography variant="body2" className={classes.location}><i>{data[id].location}</i></Typography>
-                    { data[id].description && <Typography variant="subtitle1">{data[id].description}</Typography> }
+                    <Typography variant="h4" className={classes.title} color="primary">{data[id].title}</Typography>
+                    <Typography variant="body2" className={classes.location} color="primary"><i>{data[id].location}</i></Typography>
+                    { data[id].description && <Typography variant="subtitle1" color="primary">{data[id].description}</Typography> }
                 </div>
             </div>
         </Fade>

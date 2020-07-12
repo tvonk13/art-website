@@ -36,9 +36,9 @@ export default function About() {
             <Box py={4} px={4} className={classes.aboutContainer} id="aboutContainer">
                 <img src={Profile} className={classes.profile} alt="profile"/>
                 <Box width="30%">
-                    <Typography variant="h2">Hi, I'm Taylor</Typography>
+                    <Typography variant="h2" color="primary">Hi, I'm Taylor</Typography>
                     <Box my={2}>
-                        <Typography variant="body1" className={classes.typography}>
+                        <Typography variant="body1" className={classes.typography} color="primary">
                             Welcome to my website! I am a California-based artist who works as a software
                             engineer and likes to create art for fun. During my free time I also enjoy rock
                             climbing, hiking and camping, and playing board games. I have been drawing since

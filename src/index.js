@@ -8,7 +8,7 @@ import App from "./App";
 
 const theme = createMuiTheme({ 
   palette: {
-    primary: { main: "#37374A" },
+    primary: { main: "#343434" },
     secondary: { main: "#81CDC6" },
     logoColors: {
       pink: "#FF91B4",
@@ -16,10 +16,9 @@ const theme = createMuiTheme({
       yellow: "#FFC350",
       purple: "#B073BD"
     },
-    background: "#BFA6BC"
   },
   typography: {
-    /* fontFamily: 'Open Sans' */
+    fontFamily: 'Nunito'
   }
 });
 
