@@ -1,16 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import { makeStyles, Box, Typography, Link, Slide, Fade } from '@material-ui/core';
+import {makeStyles, Typography, Link, Slide, Fade, Grid, Hidden} from '@material-ui/core';
 import Profile from './assets/profile.jpg';
 
 const useStyles = makeStyles(theme => ({
-    aboutContainer: {
-        display: 'flex',
-        justifyContent: 'center',
-    },
     profile: {
-        maxWidth: '25%',
-        margin: theme.spacing(1),
-        marginRight: theme.spacing(4),
+        maxHeight: '75vh',
+        marginBottom: theme.spacing(2),
     },
     link: {
         '&:hover': {
@@ -18,7 +13,7 @@ const useStyles = makeStyles(theme => ({
         },
     },
     typography: {
-        marginBottom: theme.spacing(3),
+        marginBottom: theme.spacing(1),
     }
 }));
 
@@ -40,13 +35,21 @@ export default function About() {
 
     return(
         <Slide in={isContentLoaded} timeout={500} mountOnEnter unmountOnExit direction="left">
-            <Box py={4} px={4} className={classes.aboutContainer} id="aboutContainer">
-                <Fade in={isImgLoaded} timeout={500}>
-                    <img src={Profile} className={classes.profile} alt="profile"/>
-                </Fade>
-                <Box width="30%">
+            <Grid container justify="center" style={{marginTop: '40px'}}>
+                <Hidden only={['xs', 'sm', 'md']}>
+                    <Grid lg={1}/>
+                </Hidden>
+                <Grid item xs={12} lg={5} container justify="center">
+                    <Fade in={isImgLoaded} timeout={500}>
+                        <img src={Profile} className={classes.profile} alt="profile"/>
+                    </Fade>
+                </Grid>
+                <Hidden only={['xs', 'lg']}>
+                    <Grid item sm={3}/>
+                </Hidden>
+                <Grid item xs={10} sm={6} lg={4} container direction="column" justify="flex-start" style={{paddingLeft: '16px'}}>
                     <Typography variant="h2" color="primary">Hi, I'm Taylor</Typography>
-                    <Box my={2}>
+                    <Grid item container>
                         <Typography variant="body1" className={classes.typography} color="primary">
                             Welcome to my website! I am a California-based artist who works as a software
                             engineer and likes to create art for fun. During my free time I also enjoy rock
@@ -65,9 +68,12 @@ export default function About() {
                             Have questions? Shoot me an email at
                             <Link href="mailto:tvonk.art@gmail.com" target="_blank" color="secondary" className={classes.link}> tvonk.art@gmail.com</Link>.
                         </Typography>
-                    </Box>
-                </Box>
-            </Box>
+                    </Grid>
+                </Grid>
+                <Hidden only='xs'>
+                    <Grid item sm={3} lg={1}/>
+                </Hidden>
+            </Grid>
         </Slide>
     )
 }

@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-//import * as data from './assets/photography';
 import { makeStyles, Typography, Fade, Grid } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({

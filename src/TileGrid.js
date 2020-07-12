@@ -10,7 +10,6 @@ const useStyles = makeStyles((theme) => ({
         },
         height: 350,
         margin: theme.spacing(1),
-        //flex: '1 1 20%',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         transform: 'translate3d(0,0,0)',
@@ -54,7 +53,7 @@ function Tile({tile, path, index, columns}) {
 
     useEffect(() => {
         setTimeout( () => setIsLoaded(true), (Math.floor(index / columns) * 50) + ((index % columns) * 100));
-    }, [index])
+    }, [index, columns])
 
     return (
          <Slide in={isLoaded} direction="left" key={tile.title} timeout={500}>
