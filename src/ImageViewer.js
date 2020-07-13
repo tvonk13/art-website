@@ -28,7 +28,7 @@ export default function ImageViewer(props) {
     })
 
     return (
-        <Fade in={isImgLoaded} timeout={1000}>
+        <Fade in={isImgLoaded} timeout={500}>
             <Grid container direction="column" className={classes.container} >
                 <Grid item container direction="column" style={{marginBottom: "24px"}} alignItems="center">
                     <Typography variant="h4" color="primary" style={{marginBottom: "4px"}}>{data[id].title}</Typography>

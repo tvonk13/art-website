@@ -30,10 +30,10 @@ export default function Nav() {
 
     return (
         <Grid container alignItems='center' className={classes.navContainer}>
-            <Grid item container xs={12} md={4} lg={12} justify='center'>
+            <Grid item container xs={12} md={4} lg={12} justify="center">
                 <img src={Logo} className={classes.logo} alt="logo"/>
             </Grid>
-            <Grid item container xs={12} md={8} lg={12} spacing={2} alignItems="center" justify='center'>
+            <Grid item container xs={12} md={8} lg={12} spacing={2} alignItems="center" justify="center">
                 <Grid item md={2} lg={12}>
                     <ButtonLink label="ART" to="/art" pathname={pathname}/>
                 </Grid>
