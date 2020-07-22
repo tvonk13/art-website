@@ -14,8 +14,8 @@ import Amanita from './artwork/amanita.png';
 import AmanitaThumb from './artwork/amanita-thumb.png';
 import AmanitaRound from './artwork/amanita-round.png';
 import AmanitaRoundThumb from './artwork/amanita-round-thumb.png';
-import BodiesCollide from './artwork/bodies-collide.jpg';
-import BodiesCollideThumb from './artwork/bodies-collide-thumb.jpg';
+import BodiesCollide from './artwork/bodies-collide.png';
+import BodiesCollideThumb from './artwork/bodies-collide-thumb.png';
 import ColorfulLines from './artwork/colorful-lines.jpg';
 import ColorfulLinesThumb from './artwork/colorful-lines-thumb.jpg';
 import Drips from './artwork/drips.png';
@@ -30,6 +30,26 @@ import Polyphemus from './artwork/polyphemus.png';
 import PolyphemusThumb from './artwork/polyphemus-thumb.png';
 import Roses from './artwork/roses.png';
 import RosesThumb from './artwork/roses-thumb.png';
+import Koi from './artwork/koi.png';
+import KoiThumb from './artwork/koi-thumb.png';
+import Dandelions from './artwork/dandelions.png';
+import DandelionsThumb from './artwork/dandelions-thumb.png';
+
+const dandelions = {
+    img: Dandelions,
+    thumb: DandelionsThumb,
+    title: 'Dandelions',
+    id: 'dandelions',
+    subtitle: 'Digital'
+}
+
+const koi = {
+    img: Koi,
+    thumb: KoiThumb,
+    title: 'Koi',
+    id: 'koi',
+    subtitle: 'Digital'
+}
 
 const pattern = {
     img: Pattern,
@@ -100,7 +120,7 @@ const bodiesCollide = {
     thumb: BodiesCollideThumb,
     title: 'Bodies Collide',
     id: 'bodiesCollide',
-    subtitle: 'Ink pen on paper'
+    subtitle: 'Digital | Inspired by "Our Bodies Will Collide" by Emil Landman'
 }
 
 const colorfulLines = {
@@ -162,6 +182,8 @@ const roses = {
 // ---------- Page lists and maps ----------
 
 export const artList = [
+    koi,
+    dandelions,
     pattern,
     gecko,
     beetle,
@@ -180,6 +202,8 @@ export const artList = [
 ]
 
 export const artMap = {
+    dandelions: dandelions,
+    koi: koi,
     pattern: pattern,
     gecko: gecko,
     beetle: beetle,

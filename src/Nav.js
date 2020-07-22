@@ -1,9 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from "react-router-dom";
 import { makeStyles, Typography, Grid } from "@material-ui/core";
-
 import Logo from './assets/artwork/logo.svg';
-
 
 const useStyles = makeStyles(theme => ({
     logo: {
@@ -31,7 +29,9 @@ export default function Nav() {
     return (
         <Grid container alignItems='center' className={classes.navContainer}>
             <Grid item container xs={12} md={4} lg={12} justify="center">
-                <img src={Logo} className={classes.logo} alt="logo"/>
+                <Link to="/art">
+                    <img src={Logo} className={classes.logo} alt="logo" />
+                </Link>
             </Grid>
             <Grid item container xs={12} md={8} lg={12} spacing={2} alignItems="center" justify="center">
                 <Grid item md={2} lg={12}>
