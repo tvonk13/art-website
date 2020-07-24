@@ -1,7 +1,7 @@
-import React from 'react';
-import { Box } from '@material-ui/core';
+import React from "react";
+import { Box } from "@material-ui/core";
 
-import { photoList } from './assets/photography';
+import { photoList } from "./assets/photography";
 import TileGrid from "./TileGrid";
 
 export default function Photography() {

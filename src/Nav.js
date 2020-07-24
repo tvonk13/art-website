@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { makeStyles, Typography, Grid } from "@material-ui/core";
-import Logo from './assets/artwork/logo.svg';
+import Logo from "./assets/artwork/logo.svg";
 
 const useStyles = makeStyles(theme => ({
     logo: {
@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
         height: 100,
     },
     typography: {
-        '&:hover': {
+        "&:hover": {
             color: theme.palette.logoColors.pink,
         },
     },
@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
         paddingTop: theme.spacing(2),
         paddingLeft: theme.spacing(5),
         paddingRight: theme.spacing(4),
-        position: 'sticky',
+        position: "sticky",
         top: 0,
     }
 }));
@@ -27,7 +27,7 @@ export default function Nav() {
     const { pathname } = useLocation();
 
     return (
-        <Grid container alignItems='center' className={classes.navContainer}>
+        <Grid container alignItems="center" className={classes.navContainer}>
             <Grid item container xs={12} md={4} lg={12} justify="center">
                 <Link to="/art">
                     <img src={Logo} className={classes.logo} alt="logo" />
@@ -57,7 +57,7 @@ function ButtonLink({label, to, pathname}) {
             component={Link}
             to={to}
             color={color}
-            style={{textDecoration: 'none'}}
+            style={{textDecoration: "none"}}
             className={classes.typography}
         >
             {label}

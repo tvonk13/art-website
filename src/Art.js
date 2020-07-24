@@ -1,7 +1,6 @@
-import React from 'react';
-import { Box } from '@material-ui/core';
-
-import { artList } from './assets/artwork';
+import React from "react";
+import { Box } from "@material-ui/core";
+import { artList } from "./assets/artwork";
 import TileGrid from "./TileGrid";
 
 export default function Art() {

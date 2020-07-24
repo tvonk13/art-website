@@ -1,21 +1,19 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import { makeStyles, Grid } from "@material-ui/core";
-
-import Nav from './Nav';
-import Art from './Art';
+import Nav from "./Nav";
+import Art from "./Art";
 import Photography from './Photography';
-import About from './About';
+import About from "./About";
 import ImageViewer from "./ImageViewer";
-
-import { photoMap } from './assets/photography';
-import { artMap } from './assets/artwork';
+import { photoMap } from "./assets/photography";
+import { artMap } from "./assets/artwork";
 
 const useStyles = makeStyles(theme => ({
     main: {
-        display: 'flex',
-        flexDirection: 'row',
-        width: '100%',
+        display: "flex",
+        flexDirection: "row",
+        width: "100%",
     },
 }));
 

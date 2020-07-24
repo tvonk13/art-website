@@ -1,16 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import { makeStyles, Typography, Link, Slide, Fade, Grid } from '@material-ui/core';
-import Profile from './assets/profile.jpg';
+import React, { useEffect, useState } from "react";
+import { makeStyles, Typography, Link, Slide, Fade, Grid } from "@material-ui/core";
+import Profile from "./assets/profile.jpg";
 
 const useStyles = makeStyles(theme => ({
     profile: {
-        maxWidth: '90%',
-        maxHeight: '517.33px',
-        //width: '100%',
+        maxWidth: "90%",
+        maxHeight: "517.33px",
         marginBottom: theme.spacing(2),
     },
     link: {
-        '&:hover': {
+        "&:hover": {
             color: theme.palette.logoColors.pink,
         },
     },
@@ -37,7 +36,7 @@ export default function About() {
 
     return(
         <Slide in={isContentLoaded} timeout={500} mountOnEnter unmountOnExit direction="left">
-            <Grid container justify="center" style={{marginTop: '40px', marginBottom: '40px'}}>
+            <Grid container justify="center" style={{marginTop: "40px", marginBottom: "40px"}}>
                 <Grid item xs={12} lg={4} container justify="center" >
                     <Fade in={isImgLoaded} timeout={500}>
                         <img src={Profile} className={classes.profile} alt="profile"/>

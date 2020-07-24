@@ -1,6 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import React from "react";
+import ReactDOM from "react-dom";
+import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import { HashRouter } from "react-router-dom";
 import CssBaseLine from "@material-ui/core/CssBaseline";
 
@@ -18,7 +18,7 @@ const theme = createMuiTheme({
     },
   },
   typography: {
-    fontFamily: 'Nunito'
+    fontFamily: "Nunito"
   }
 });
 

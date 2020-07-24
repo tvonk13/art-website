@@ -5,21 +5,21 @@ import { Link } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
     img: {
         boxShadow: "5px 5px 10px 0 #f0f0f0",
-        '&:hover': {
+        "&:hover": {
             opacity: 0.4
         },
         height: 350,
         margin: theme.spacing(1),
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        transform: 'translate3d(0,0,0)',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        transform: "translate3d(0,0,0)",
         display: 'block'
     },
     div: {
-        display: 'flex',
-        flexWrap: 'wrap',
-        flexDirection: 'row',
-        justifyContent: 'center'
+        display: "flex",
+        flexWrap: "wrap",
+        flexDirection: "row",
+        justifyContent: "center"
     },
 }));
 

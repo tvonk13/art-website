@@ -1,13 +1,14 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { makeStyles, Typography, Fade, Grid } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
     container: {
         paddingTop: theme.spacing(5),
+        marginBottom: theme.spacing(5),
     },
     img: {
-        maxWidth: '75vw',
-        maxHeight: '75vh',
+        maxWidth: "75vw",
+        maxHeight: "75vh",
         boxShadow: "5px 5px 15px 0 #f0f0f0",
     }
 }))
