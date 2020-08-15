@@ -57,7 +57,7 @@ function Tile({tile, path, index, columns}) {
 
     return (
          <Slide in={isLoaded} direction="left" key={tile.title} timeout={500}>
-            <Box key={tile.title} component={Link} to={path + tile.id} className={classes.img} style={{backgroundImage: `url(${tile.thumb})`}}/>
+            <Box key={tile.title} component={Link} to={path + tile.id + "/" + index} className={classes.img} style={{backgroundImage: `url(${tile.thumb})`}}/>
          </Slide>
     );
 }
