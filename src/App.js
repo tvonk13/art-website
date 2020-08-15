@@ -1,5 +1,5 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, useLocation } from "react-router-dom";
 import { makeStyles, Grid } from "@material-ui/core";
 import Nav from "./Nav";
 import Art from "./Art";
@@ -8,25 +8,36 @@ import About from "./About";
 import ImageViewer from "./ImageViewer";
 import { photoMap } from "./assets/photography";
 import { artMap } from "./assets/artwork";
+import Background from './assets/background.svg'
+import BackgroundLines from './assets/background-lines.svg'
+import clsx from "clsx";
 
 const useStyles = makeStyles(theme => ({
     main: {
         display: "flex",
         flexDirection: "row",
         width: "100%",
+        minHeight: "100vh",
+        backgroundImage: `url(${Background})`,
+        backgroundSize: 'cover',
+        backgroundPositionY: '50%',
     },
+    noBackground: {
+        backgroundImage: 'none'
+    }
 }));
 
 function App() {
     const classes = useStyles();
+    const {pathname} = useLocation();
 
     return (
-        <div className={classes.main}>
-            <Grid container>
-                <Grid item xs={12}>
+        <div className={clsx(classes.main, pathname !== '/about' && classes.noBackground)}>
+            <Grid container direction="column" justify="flex-start">
+                <Grid item>
                     <Nav />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid item>
                     <main>
                         <Route exact path="/" component={Art} />
                         <Route exact path="/art" component={Art} />
