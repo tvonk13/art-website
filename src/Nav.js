@@ -15,10 +15,6 @@ const useStyles = makeStyles(theme => ({
     },
     navContainer: {
         paddingTop: theme.spacing(2),
-        paddingLeft: theme.spacing(5),
-        paddingRight: theme.spacing(4),
-        position: "sticky",
-        top: 0,
     }
 }));
 
@@ -28,19 +24,19 @@ export default function Nav() {
 
     return (
         <Grid container alignItems="center" className={classes.navContainer}>
-            <Grid item container xs={12} md={4} lg={12} justify="center">
+            <Grid item container justify="center">
                 <Link to="/art">
                     <img src={Logo} className={classes.logo} alt="logo" />
                 </Link>
             </Grid>
-            <Grid item container xs={12} md={8} lg={12} spacing={2} alignItems="center" justify="center">
-                <Grid item md={2} lg={12}>
+            <Grid item container spacing={3} alignItems="center" justify="center">
+                <Grid item >
                     <ButtonLink label="ART" to="/art" pathname={pathname}/>
                 </Grid>
-                <Grid item md={4} lg={12}>
+                <Grid item >
                     <ButtonLink label="PHOTOGRAPHY" to="/photography" pathname={pathname}/>
                 </Grid>
-                <Grid item md={3} lg={12}>
+                <Grid item >
                     <ButtonLink label="ABOUT" to="/about" pathname={pathname}/>
                 </Grid>
             </Grid>

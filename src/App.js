@@ -23,10 +23,10 @@ function App() {
     return (
         <div className={classes.main}>
             <Grid container>
-                <Grid item xs={12} lg={2}>
+                <Grid item xs={12}>
                     <Nav />
                 </Grid>
-                <Grid item xs={12} lg={10}>
+                <Grid item xs={12}>
                     <main>
                         <Route exact path="/" component={Art} />
                         <Route exact path="/art" component={Art} />

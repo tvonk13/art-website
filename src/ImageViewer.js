@@ -31,13 +31,13 @@ export default function ImageViewer(props) {
     return (
         <Fade in={isImgLoaded} timeout={500}>
             <Grid container direction="column" className={classes.container} >
-                <Grid item container direction="column" style={{marginBottom: "24px"}} alignItems="center">
+                <Grid item container justify="center">
+                    <img src={data[id].img} alt={data[id].title} className={classes.img} />
+                </Grid>
+                <Grid item container direction="column" style={{marginTop: "24px"}} alignItems="center">
                     <Typography variant="h4" color="primary" style={{marginBottom: "4px"}}>{data[id].title}</Typography>
                     <Typography variant="body2" color="primary" style={{marginBottom: "4px"}}><i>{data[id].subtitle}</i></Typography>
                     { data[id].description && <Typography variant="subtitle1" color="primary">{data[id].description}</Typography> }
-                </Grid>
-                <Grid item container justify="center">
-                    <img src={data[id].img} alt={data[id].title} className={classes.img} />
                 </Grid>
             </Grid>
         </Fade>
