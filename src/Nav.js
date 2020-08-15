@@ -23,13 +23,13 @@ export default function Nav() {
     const { pathname } = useLocation();
 
     return (
-        <Grid container alignItems="center" className={classes.navContainer}>
+        <Grid container justify="center" alignItems="center" className={classes.navContainer}>
             <Grid item container justify="center">
                 <Link to="/art">
                     <img src={Logo} className={classes.logo} alt="logo" />
                 </Link>
             </Grid>
-            <Grid item container spacing={3} alignItems="center" justify="center">
+            <Grid item container justify="space-evenly" style={{width: "400px"}}>
                 <Grid item >
                     <ButtonLink label="ART" to="/art" pathname={pathname}/>
                 </Grid>
