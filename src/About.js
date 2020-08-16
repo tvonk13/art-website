@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { makeStyles, Typography, Link, Slide, Grid, Paper } from "@material-ui/core";
+import { makeStyles, Typography, Link, Grid, Paper, Fade } from "@material-ui/core";
 import Profile from "./assets/profile.png";
 
 const useStyles = makeStyles(theme => ({
@@ -23,21 +23,14 @@ export default function About() {
     const classes = useStyles();
 
     const [isContentLoaded, setIsContentLoaded] = useState(false);
-    const [isImgLoaded, setIsImgLoaded] = useState(false);
 
     useEffect(() => {
         setIsContentLoaded(true);
-
-        var img = new Image();
-        img.onload = () => {
-            setIsImgLoaded(true);
-        }
-        img.src = Profile;
     }, [])
 
     return(
-        <Slide in={isContentLoaded} timeout={500} mountOnEnter unmountOnExit direction="left">
-            <Grid container justify="center" style={{margin: '40px 0'}}>
+        <Grid container justify="center" style={{margin: '40px 0'}}>
+            <Fade in={isContentLoaded} timeout={1000}>
                 <Paper elevation={2}>
                     <Grid container direction="column" alignItems="center" style={{padding: '20px 40px'}}>
                         <Grid item>
@@ -68,7 +61,7 @@ export default function About() {
                         </Grid>
                     </Grid>
                 </Paper>
-            </Grid>
-        </Slide>
+            </Fade>
+        </Grid>
     )
 }
