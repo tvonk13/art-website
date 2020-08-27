@@ -34,6 +34,16 @@ import Koi from "./artwork/koi.png";
 import KoiThumb from "./artwork/koi-thumb.png";
 import Dandelions from "./artwork/dandelions.png";
 import DandelionsThumb from "./artwork/dandelions-thumb.png";
+import TheWiseMansFear from "./artwork/the-wise-mans-fear.jpg"
+import TheWiseMansFearThumb from "./artwork/the-wise-mans-fear-thumb.jpg"
+
+const wiseMan = {
+    img: TheWiseMansFear,
+    thumb: TheWiseMansFearThumb,
+    title: "The Wise Man's Fear",
+    id: "the_wise_mans_fear",
+    subtitle: "Digital"
+}
 
 const dandelions = {
     img: Dandelions,
@@ -55,7 +65,7 @@ const pattern = {
     img: Pattern,
     thumb: PatternThumb,
     title: "Pattern In D Minor",
-    id: "pattern",
+    id: "pattern_in_d_minor",
     subtitle: "Digital"
 }
 
@@ -87,7 +97,7 @@ const puzzlePieces = {
     img: PuzzlePieces,
     thumb: PuzzlePiecesThumb,
     title: "Puzzle Pieces",
-    id: "puzzlePieces",
+    id: "puzzle_pieces",
     subtitle: "Posca paint markers and watercolor on 140lb cold pressed paper"
 }
 
@@ -118,8 +128,8 @@ const amanitaRound = {
 const bodiesCollide = {
     img: BodiesCollide,
     thumb: BodiesCollideThumb,
-    title: "Bodies Collide",
-    id: "bodiesCollide",
+    title: "Our Bodies Will Collide",
+    id: "our_bodies_will_collide",
     subtitle: "Digital",
     description: "Inspired by \"Our Bodies Will Collide\" by Emil Landman"
 }
@@ -128,7 +138,7 @@ const colorfulLines = {
     img: ColorfulLines,
     thumb: ColorfulLinesThumb,
     title: "Colorful Lines",
-    id: "colorfulLines",
+    id: "colorful_lines",
     subtitle: "Posca paint pen"
 }
 
@@ -183,6 +193,7 @@ const roses = {
 // ---------- Page lists and maps ----------
 
 export const artList = [
+    wiseMan,
     koi,
     dandelions,
     pattern,
@@ -203,21 +214,22 @@ export const artList = [
 ]
 
 export const artMap = {
+    the_wise_mans_fear: wiseMan,
     dandelions: dandelions,
     koi: koi,
-    pattern: pattern,
+    pattern_in_d_minor: pattern,
     gecko: gecko,
     beetle: beetle,
     lion: lion,
-    puzzlePieces: puzzlePieces,
+    puzzle_pieces: puzzlePieces,
     amanita: amanita,
     deer: deer,
-    bodiesCollide: bodiesCollide,
+    our_bodies_will_collide: bodiesCollide,
     roses: roses,
     drips: drips,
     geometrics: geometrics,
     iris: iris,
     polyphemus: polyphemus,
     elephant: elephant,
-    colorfulLines: colorfulLines,
+    colorful_lines: colorfulLines,
 }

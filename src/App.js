@@ -9,7 +9,6 @@ import ImageViewer from "./ImageViewer";
 import { photoMap } from "./assets/photography";
 import { artMap } from "./assets/artwork";
 import Background from './assets/background.svg'
-import BackgroundLines from './assets/background-lines.svg'
 import clsx from "clsx";
 
 const useStyles = makeStyles(theme => ({

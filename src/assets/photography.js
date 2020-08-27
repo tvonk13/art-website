@@ -54,7 +54,7 @@ const buddhaPark = {
     img: BuddhaPark,
     thumb: BuddhaParkThumb,
     title: "Buddha In The Sky",
-    id: "buddhaPark",
+    id: "buddha_park",
     description: "",
     subtitle: "Buddha Park - Vientiane, Laos",
 }
@@ -63,7 +63,7 @@ const buddhaParkBW = {
     img: BuddhaParkBW,
     thumb: BuddhaParkBWThumb,
     title: "Buddha In The Sky",
-    id: "buddhaParkBW",
+    id: "buddha_park",
     description: "",
     subtitle: "Buddha Park - Vientiane, Laos",
 }
@@ -81,14 +81,14 @@ const butterfly = {
     thumb: ButterflyThumb,
     title: "Butterfly",
     id: "butterfly",
-    description: "",
+    description: "35mm Film",
 }
 
 const goatRock = {
     img: GoatRock,
     thumb: GoatRockThumb,
     title: "Goat Rock",
-    id: "goatRock",
+    id: "goat_rock",
     description: "",
     subtitle: "Goat Rock - Jenner, CA",
 }
@@ -97,7 +97,7 @@ const goldenGateBride = {
     img: GoldenGateBridge,
     thumb: GoldenGateBridgeThumb,
     title: "Golden Gate Bridge",
-    id: "goldenGateBride",
+    id: "golden_gate_bride",
     description: "",
     subtitle: "Land's End Trail - San Francisco, CA",
 }
@@ -106,7 +106,7 @@ const goldenGateBrideBW = {
     img: GoldenGateBridgeBW,
     thumb: GoldenGateBridgeBWThumb,
     title: "Golden Gate Bridge",
-    id: "goldenGateBrideBW",
+    id: "golden_gate_bridge",
     description: "",
     subtitle: "Land's End Trail - San Francisco, CA",
 }
@@ -115,7 +115,7 @@ const halfDome = {
     img: HalfDome,
     thumb: HalfDomeThumb,
     title: "Half Dome",
-    id: "halfDome",
+    id: "half_dome",
     description: "",
     subtitle: "Half Dome - Yosemite Valley, CA",
 }
@@ -124,7 +124,7 @@ const halfDomeCliff = {
     img: HalfDomeCliff,
     thumb: HalfDomeCliffThumb,
     title: "Standing On Top of the World",
-    id: "halfDomeCliff",
+    id: "standing_on_top_of_the_world",
     description: "",
     subtitle: "Half Dome - Yosemite Valley, CA",
 }
@@ -133,7 +133,7 @@ const holeInTheWall = {
     img: HoleInTheWall,
     thumb: HoleInTheWallThumb,
     title: "Hole In The Wall",
-    id: "holeInTheWall",
+    id: "hole_in_the_wall",
     description: "",
     subtitle: "Roxbury, MA",
 }
@@ -142,7 +142,7 @@ const kuangSiFalls = {
     img: KuangSiFalls,
     thumb: KuangSiFallsThumb,
     title: "Kuang Si Falls",
-    id: "kuangSiFalls",
+    id: "kuang_si_falls",
     description: "",
     subtitle: "Kuang Si Falls - Luang Prabang, Laos",
 }
@@ -151,7 +151,7 @@ const tahoeSnow = {
     img: TahoeSnow,
     thumb: TahoeSnowThumb,
     title: "Snow Fading",
-    id: "tahoeSnow",
+    id: "snow_fading",
     description: "",
     subtitle: "Tahoe National Forrest - Soda Springs, CA",
 }
@@ -160,7 +160,7 @@ const tahoeSunset = {
     img: TahoeSunset,
     thumb: TahoeSunsetThumb,
     title: "Tahoe Sunset",
-    id: "tahoeSunset",
+    id: "tahoe_sunset",
     description: "",
     subtitle: "Rucker Lake, Tahoe National Forrest - Rucker Lake, CA",
 }
@@ -169,7 +169,7 @@ const treeMoss = {
     img: TreesMoss,
     thumb: TreesMossThumb,
     title: "Moss",
-    id: "treeMoss",
+    id: "moss",
     description: "",
     subtitle: "Tahoe National Forrest - Soda Springs, CA",
 }
@@ -178,8 +178,8 @@ const twinTowers = {
     img: TwinTowers,
     thumb: TwinTowersThumb,
     title: "Reflections",
-    id: "twinTowers",
-    description: "Taken at the base of the Twin Towers Memorial",
+    id: "reflections",
+    description: "Taken at the base of the Twin Towers Memorial | 35mm Film",
     subtitle: "Twin Towers Memorial - New York, NY",
 }
 
@@ -199,23 +199,21 @@ export const photoList = [
     butterfly,
     holeInTheWall,
     goldenGateBride,
-    bubbles,
 ]
 
 export const photoMap = {
-    tahoeSnow: tahoeSnow,
-    tahoeSunset: tahoeSunset,
-    treeMoss: treeMoss,
-    kuangSiFalls: kuangSiFalls,
+    snow_fading: tahoeSnow,
+    tahoe_sunset: tahoeSunset,
+    moss: treeMoss,
+    kuang_si_falls: kuangSiFalls,
     bumblebee: bumblebee,
     biarritz: biarritz,
-    halfDome: halfDome,
-    halfDomeCliff: halfDomeCliff,
-    buddhaParkBW: buddhaParkBW,
-    twinTowers: twinTowers,
-    goatRock: goatRock,
+    half_dome: halfDome,
+    standing_on_top_of_the_world: halfDomeCliff,
+    buddha_park: buddhaParkBW,
+    reflections: twinTowers,
+    goat_rock: goatRock,
     butterfly: butterfly,
-    holeInTheWall: holeInTheWall,
-    goldenGateBride: goldenGateBride,
-    bubbles: bubbles,
+    hole_in_the_wall: holeInTheWall,
+    golden_gate_bride: goldenGateBride,
 }

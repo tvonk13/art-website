@@ -55,7 +55,7 @@ export default function About() {
                                 </Typography>
                                 <Typography variant="body1" className={classes.typography}>
                                     Have questions? Shoot me an email at
-                                    <Link href="mailto:tvonk.art@gmail.com" target="_blank" color="secondary" className={classes.link}> tvonk.art@gmail.com</Link>.
+                                    <Link href="mailto:tvonk.art@gmail.com" target="_blank" color="secondary" className={classes.link} style={{marginLeft: "5px"}}>tvonk.art@gmail.com</Link>.
                                 </Typography>
                             </Grid>
                         </Grid>
