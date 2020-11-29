@@ -36,6 +36,16 @@ import Dandelions from "./artwork/dandelions.png";
 import DandelionsThumb from "./artwork/dandelions-thumb.png";
 import TheWiseMansFear from "./artwork/the-wise-mans-fear.jpg"
 import TheWiseMansFearThumb from "./artwork/the-wise-mans-fear-thumb.jpg"
+import WinterBirb from './artwork/winter-birb.jpeg';
+import WinterBirbThumb from './artwork/winter-birb-thumb.jpeg';
+
+const winterBirb = {
+    img: WinterBirb,
+    thumb: WinterBirbThumb,
+    title: "Winter Birb",
+    id: "winter_birb",
+    subtitle: "Posca paint markers on mixed media paper"
+}
 
 const wiseMan = {
     img: TheWiseMansFear,
@@ -193,6 +203,7 @@ const roses = {
 // ---------- Page lists and maps ----------
 
 export const artList = [
+    winterBirb,
     wiseMan,
     koi,
     dandelions,
@@ -214,6 +225,7 @@ export const artList = [
 ]
 
 export const artMap = {
+    winter_birb: winterBirb,
     the_wise_mans_fear: wiseMan,
     dandelions: dandelions,
     koi: koi,

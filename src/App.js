@@ -8,8 +8,10 @@ import About from "./About";
 import ImageViewer from "./ImageViewer";
 import { photoMap } from "./assets/photography";
 import { artMap } from "./assets/artwork";
+import { doodleMap } from "./assets/doodles";
 import Background from './assets/background.svg'
 import clsx from "clsx";
+import Doodles from './Doodles';
 
 const useStyles = makeStyles(theme => ({
     main: {
@@ -40,8 +42,10 @@ function App() {
                     <main>
                         <Route exact path="/" component={Art} />
                         <Route exact path="/art" component={Art} />
+                        <Route exact path="/doodles" component={Doodles} />
                         <Route exact path="/photography" component={Photography} />
                         <Route exact path="/art/:id" render={(props) => <ImageViewer {...props} data={artMap}/>} />
+                        <Route exact path="/doodles/:id" render={(props) => <ImageViewer {...props} data={doodleMap}/>} />
                         <Route exact path="/photography/:id" render={(props) => <ImageViewer {...props} data={photoMap}/>} />
                         <Route exact path="/about" component={About} />
                     </main>
