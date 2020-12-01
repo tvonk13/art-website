@@ -9,16 +9,16 @@ import App from "./App";
 const theme = createMuiTheme({ 
   palette: {
     primary: { main: "#343434" },
-    secondary: { main: "#81CDC6" },
+    secondary: { main: "#22B8B5" },
     logoColors: {
-      pink: "#FF91B4",
-      green: "#81CDC6",
-      yellow: "#FFC350",
-      purple: "#B073BD"
+      pink: "#FF789E",
+      green: "#22B8B5",
+      yellow: "#FFC141",
+      purple: "#894797"
     },
   },
   typography: {
-    fontFamily: "Nunito"
+    fontFamily: "Roboto"
   }
 });
 

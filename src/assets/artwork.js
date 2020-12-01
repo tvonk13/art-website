@@ -12,8 +12,8 @@ import Deer from "./artwork/deer.jpg";
 import DeerThumb from "./artwork/deer-thumb.jpg";
 import Amanita from "./artwork/amanita.png";
 import AmanitaThumb from "./artwork/amanita-thumb.png";
-import AmanitaRound from "./artwork/amanita-round.png";
-import AmanitaRoundThumb from "./artwork/amanita-round-thumb.png";
+//import AmanitaRound from "./artwork/amanita-round.png";
+//import AmanitaRoundThumb from "./artwork/amanita-round-thumb.png";
 import BodiesCollide from "./artwork/bodies-collide.png";
 import BodiesCollideThumb from "./artwork/bodies-collide-thumb.png";
 import ColorfulLines from "./artwork/colorful-lines.jpg";
@@ -127,13 +127,13 @@ const amanita = {
     subtitle: "Digital"
 }
 
-const amanitaRound = {
+/*const amanitaRound = {
     img: AmanitaRound,
     thumb: AmanitaRoundThumb,
     title: "Amanita",
     id: "amanitaRound",
     subtitle: "Digital"
-}
+}*/
 
 const bodiesCollide = {
     img: BodiesCollide,

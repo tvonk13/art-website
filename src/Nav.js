@@ -1,12 +1,12 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { makeStyles, Typography, Grid } from "@material-ui/core";
-import Logo from "./assets/artwork/logo.svg";
+import Logo from "./assets/logo.svg";
 
 const useStyles = makeStyles(theme => ({
     logo: {
         width: 200,
-        height: 100,
+        margin: theme.spacing(3, 0),
     },
     typography: {
         "&:hover": {
@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
         },
     },
     navContainer: {
-        paddingTop: theme.spacing(2),
+        padding: theme.spacing(2, 0),
     }
 }));
 

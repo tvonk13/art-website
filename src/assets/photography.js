@@ -1,9 +1,9 @@
 import Biarritz from "./photography/biarritz.jpg";
 import BiarritzThumb from "./photography/biarritz-thumb.jpg";
-import Bubbles from "./photography/bubbles.jpg";
-import BubblesThumb from "./photography/bubbles-thumb.jpg";
-import BuddhaPark from "./photography/buddha-park.jpg";
-import BuddhaParkThumb from "./photography/buddha-park-thumb.jpg";
+//import Bubbles from "./photography/bubbles.jpg";
+//import BubblesThumb from "./photography/bubbles-thumb.jpg";
+//import BuddhaPark from "./photography/buddha-park.jpg";
+//import BuddhaParkThumb from "./photography/buddha-park-thumb.jpg";
 import BuddhaParkBW from "./photography/buddha-park-bw.jpg";
 import BuddhaParkBWThumb from "./photography/buddha-park-bw-thumb.jpg";
 import Bumblebee from "./photography/bumblebee.JPG";
@@ -14,8 +14,8 @@ import GoatRock from "./photography/goat-rock.jpg";
 import GoatRockThumb from "./photography/goat-rock-thumb.jpg";
 import GoldenGateBridge from "./photography/golden-gate-bridge.jpg";
 import GoldenGateBridgeThumb from "./photography/golden-gate-bridge-thumb.jpg";
-import GoldenGateBridgeBW from "./photography/golden-gate-bridge-bw.jpg";
-import GoldenGateBridgeBWThumb from "./photography/golden-gate-bridge-bw-thumb.jpg";
+//import GoldenGateBridgeBW from "./photography/golden-gate-bridge-bw.jpg";
+//import GoldenGateBridgeBWThumb from "./photography/golden-gate-bridge-bw-thumb.jpg";
 import HalfDome from "./photography/half-dome.jpg";
 import HalfDomeThumb from "./photography/half-dome-thumb.jpg";
 import HalfDomeCliff from "./photography/half-dome-cliff.jpg";
@@ -42,22 +42,22 @@ const biarritz = {
     subtitle: "Biarritz, France",
 }
 
-const bubbles = {
+/*const bubbles = {
     img: Bubbles,
     thumb: BubblesThumb,
     title: "Bubbles",
     id: "bubbles",
     description: "",
-}
+}*/
 
-const buddhaPark = {
+/*const buddhaPark = {
     img: BuddhaPark,
     thumb: BuddhaParkThumb,
     title: "Buddha In The Sky",
     id: "buddha_park",
     description: "",
     subtitle: "Buddha Park - Vientiane, Laos",
-}
+}*/
 
 const buddhaParkBW = {
     img: BuddhaParkBW,
@@ -102,14 +102,14 @@ const goldenGateBride = {
     subtitle: "Land's End Trail - San Francisco, CA",
 }
 
-const goldenGateBrideBW = {
+/*const goldenGateBrideBW = {
     img: GoldenGateBridgeBW,
     thumb: GoldenGateBridgeBWThumb,
     title: "Golden Gate Bridge",
     id: "golden_gate_bridge",
     description: "",
     subtitle: "Land's End Trail - San Francisco, CA",
-}
+}*/
 
 const halfDome = {
     img: HalfDome,
