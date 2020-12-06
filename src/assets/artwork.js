@@ -38,6 +38,16 @@ import TheWiseMansFear from "./artwork/the-wise-mans-fear.jpg"
 import TheWiseMansFearThumb from "./artwork/the-wise-mans-fear-thumb.jpg"
 import WinterBirb from './artwork/winter-birb.jpeg';
 import WinterBirbThumb from './artwork/winter-birb-thumb.jpeg';
+import PoppiesAndMarigolds from './artwork/poppies-and-marigolds.jpeg'
+import PoppiesAndMarigoldsThumb from './artwork/poppies-and-marigolds-thumb.jpeg'
+
+const poppiesAndMarigolds = {
+    img: PoppiesAndMarigolds,
+    thumb: PoppiesAndMarigoldsThumb,
+    title: "Poppies And Marigolds",
+    id: "poppies_and_marigolds",
+    subtitle: "Posca paint markers and watercolor on mixed media paper"
+}
 
 const winterBirb = {
     img: WinterBirb,
@@ -203,6 +213,7 @@ const roses = {
 // ---------- Page lists and maps ----------
 
 export const artList = [
+    poppiesAndMarigolds,
     winterBirb,
     wiseMan,
     koi,
@@ -225,6 +236,7 @@ export const artList = [
 ]
 
 export const artMap = {
+    poppies_and_marigolds: poppiesAndMarigolds,
     winter_birb: winterBirb,
     the_wise_mans_fear: wiseMan,
     dandelions: dandelions,
