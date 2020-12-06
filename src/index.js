@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import { HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import CssBaseLine from "@material-ui/core/CssBaseline";
 
 import App from "./App";
@@ -25,9 +25,9 @@ const theme = createMuiTheme({
 ReactDOM.render(
   <ThemeProvider theme={theme}>
     <CssBaseLine />
-    <HashRouter>
+    <BrowserRouter>
       <App />
-    </HashRouter>
+    </BrowserRouter>
   </ThemeProvider>,
   document.getElementById("root"),
 );

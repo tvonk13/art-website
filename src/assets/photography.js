@@ -32,6 +32,17 @@ import TreesMoss from "./photography/trees-moss-contrast.jpg";
 import TreesMossThumb from "./photography/trees-moss-contrast-thumb.jpg";
 import TwinTowers from "./photography/twin-towers-memorial.jpeg";
 import TwinTowersThumb from "./photography/twin-towers-memorial-thumb.jpeg";
+import MistyAfternoon from "./photography/misty-afternoon.jpg";
+import MistyAfternoonThumb from "./photography/misty-afternoon-thumb.jpg";
+
+const mistyAfternoon = {
+    img: MistyAfternoon,
+    thumb: MistyAfternoonThumb,
+    title: "Misty Afternoon",
+    id: "misty_afternoon",
+    description: "Taken while descending into Pratt Lake Basin",
+    subtitle: "Alpine Lakes Wilderness, WA",
+}
 
 const biarritz = {
     img: Biarritz,
@@ -185,6 +196,7 @@ const twinTowers = {
 
 // ---------- Page lists ----------
 export const photoList = [
+    mistyAfternoon,
     tahoeSnow,
     tahoeSunset,
     treeMoss,
@@ -202,6 +214,7 @@ export const photoList = [
 ]
 
 export const photoMap = {
+    misty_afternoon: mistyAfternoon,
     snow_fading: tahoeSnow,
     tahoe_sunset: tahoeSunset,
     moss: treeMoss,
