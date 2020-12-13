@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Box } from "@material-ui/core";
+import ImageGrid from "./ImageGrid";
+import Client from './prismic-configuration';
+import Prismic from 'prismic-javascript';
 
-import { photoList } from "./assets/photography";
-import TileGrid from "./TileGrid";
+export default function Photo() {
+    const [photoList, setPhotoList] = useState([]);
 
-export default function Photography() {
+    useEffect(() => {
+        Client.query(
+            Prismic.Predicates.at('document.type', 'photo'),
+            { fetch : 'photo.thumbnail', orderings: '[document.first_publication_date desc]' }
+        )
+            .then(response => setPhotoList(response.results));
+    }, [])
+
     return(
-        <Box py={4} px={4}>
-            <TileGrid list={photoList} columns={3} path="/photography/"/>
+        <Box py={4} px={4} width="100%">
+            <ImageGrid list={photoList} path="/photography/"/>
         </Box>
     )
 }
