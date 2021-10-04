@@ -10,7 +10,7 @@ export default function Photo() {
     useEffect(() => {
         Client.query(
             Prismic.Predicates.at('document.type', 'photo'),
-            { fetch : 'photo.thumbnail', orderings: '[document.first_publication_date desc]' }
+            { fetch : 'photo.thumbnail', orderings: '[document.first_publication_date desc]', pageSize: 100 }
         )
             .then(response => setPhotoList(response.results));
     }, [])

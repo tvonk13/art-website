@@ -13,7 +13,7 @@ export default function Art() {
                 Prismic.Predicates.at('document.type', 'artwork'),
                 Prismic.Predicates.at('document.tags', ['final'])
         ],
-        { fetch : ['artwork.thumbnail', 'artwork.date'] })
+        { fetch : ['artwork.thumbnail', 'artwork.date'], pageSize: 100 })
             .then(response => setArtList(response.results.sort((a, b) => sortDesc(new Date(a.data.date), new Date(b.data.date)))))
     }, [])
 
