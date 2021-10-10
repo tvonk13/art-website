@@ -5,7 +5,8 @@ import Logo from "./assets/logo.png";
 
 const useStyles = makeStyles(theme => ({
     logo: {
-        height: 100,
+        height: 200,
+        marginBottom: theme.spacing(2),
     },
     typography: {
         "&:hover": {
@@ -27,7 +28,6 @@ export default function Nav() {
                 <Link to="/art">
                     <img src={Logo} className={classes.logo} alt="logo" />
                 </Link>
-                <Box marginTop={1} marginBottom={4} fontSize={60} fontWeight={100}>TVONK</Box>
             </Grid>
             <Grid item container justify="space-evenly" style={{width: "400px"}}>
                 <Grid item >
