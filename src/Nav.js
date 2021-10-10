@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
     },
     typography: {
         "&:hover": {
-            color: theme.palette.logoColors.pink,
+            color: theme.palette.logoColors.yellow,
         },
     },
     navContainer: {

@@ -8,13 +8,11 @@ import App from "./App";
 
 const theme = createMuiTheme({ 
   palette: {
-    primary: { main: "#343434" },
-    secondary: { main: "#22B8B5" },
+    primary: { main: "#272522" },
+    secondary: { main: "#E98145" },
     logoColors: {
-      pink: "#FF789E",
-      green: "#22B8B5",
-      yellow: "#FFC141",
-      purple: "#894797"
+      orange: "#E98145",
+      yellow: "#EBB071"
     },
   },
   typography: {

@@ -39,11 +39,11 @@ const useStyles = makeStyles(theme => ({
         fontSize: '1rem',
         lineHeight: '1.5',
         '& a':{
-            color: theme.palette.secondary.main,
+            color: theme.palette.logoColors.orange,
             textDecoration: 'none',
             targetNew: 'tab',
             '&:hover': {
-                color: theme.palette.logoColors.pink,
+                color: theme.palette.logoColors.yellow,
             },
         }
     }
