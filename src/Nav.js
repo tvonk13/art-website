@@ -1,12 +1,11 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { makeStyles, Typography, Grid } from "@material-ui/core";
-import Logo from "./assets/logo.svg";
+import { makeStyles, Typography, Grid, Box } from '@material-ui/core';
+import Logo from "./assets/logo.png";
 
 const useStyles = makeStyles(theme => ({
     logo: {
-        width: 200,
-        margin: theme.spacing(3, 0),
+        height: 100,
     },
     typography: {
         "&:hover": {
@@ -14,7 +13,7 @@ const useStyles = makeStyles(theme => ({
         },
     },
     navContainer: {
-        padding: theme.spacing(2, 0),
+        margin: theme.spacing(4, 0, 2, 0),
     }
 }));
 
@@ -24,10 +23,11 @@ export default function Nav() {
 
     return (
         <Grid container justify="center" alignItems="center" className={classes.navContainer}>
-            <Grid item container justify="center">
+            <Grid item container justify="center" alignItems="center" direction="column">
                 <Link to="/art">
                     <img src={Logo} className={classes.logo} alt="logo" />
                 </Link>
+                <Box marginTop={1} marginBottom={4} fontSize={60} fontWeight={100}>TVONK</Box>
             </Grid>
             <Grid item container justify="space-evenly" style={{width: "400px"}}>
                 <Grid item >
