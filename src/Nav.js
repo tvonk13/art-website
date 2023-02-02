@@ -6,7 +6,7 @@ import Logo from "./assets/logo.png";
 const useStyles = makeStyles(theme => ({
     logo: {
         height: 200,
-        marginBottom: theme.spacing(2),
+        // marginBottom: theme.spacing(1),
     },
     typography: {
         "&:hover": {
